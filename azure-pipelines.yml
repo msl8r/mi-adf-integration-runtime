@@ -39,25 +39,25 @@ stages:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-16bb576 --yes
+                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:prod-d55dfea --yes
             - task: AzureCLI@1
               displayName: "ACR Login"
               inputs:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-3c01d5e --yes
+                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-318e758 --yes
             - task: AzureCLI@1
               displayName: "ACR Login"
               inputs:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-f8d1cab --yes
+                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-d2409b5 --yes
             - task: AzureCLI@1
               displayName: "ACR Login"
               inputs:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-cb3da8e --yes
+                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-2b73c98 --yes
