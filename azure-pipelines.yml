@@ -39,25 +39,53 @@ stages:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:prod-d55dfea --yes
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-cde49a8 --yes
             - task: AzureCLI@1
               displayName: "ACR Login"
               inputs:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-318e758 --yes
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-3d7b2f1 --yes
             - task: AzureCLI@1
               displayName: "ACR Login"
               inputs:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-d2409b5 --yes
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-710d541 --yes
             - task: AzureCLI@1
               displayName: "ACR Login"
               inputs:
                 azureSubscription: $(azureSubscriptionEndpoint)
                 scriptLocation: "inlineScript"
                 inlineScript: |
-                  az acr repository delete --name sdshmctspublic --image mi/adf-integration-runtime:dev-2b73c98 --yes
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-c9a594d --yes
+            - task: AzureCLI@1
+              displayName: "ACR Login"
+              inputs:
+                azureSubscription: $(azureSubscriptionEndpoint)
+                scriptLocation: "inlineScript"
+                inlineScript: |
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-73c9410 --yes
+            - task: AzureCLI@1
+              displayName: "ACR Login"
+              inputs:
+                azureSubscription: $(azureSubscriptionEndpoint)
+                scriptLocation: "inlineScript"
+                inlineScript: |
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-172803c --yes
+            - task: AzureCLI@1
+              displayName: "ACR Login"
+              inputs:
+                azureSubscription: $(azureSubscriptionEndpoint)
+                scriptLocation: "inlineScript"
+                inlineScript: |
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-d301bb7 --yes
+            - task: AzureCLI@1
+              displayName: "ACR Login"
+              inputs:
+                azureSubscription: $(azureSubscriptionEndpoint)
+                scriptLocation: "inlineScript"
+                inlineScript: |
+                  az acr repository delete --name sdshmctspublic --image mi/azure-functions:stg-56d19fa --yes
